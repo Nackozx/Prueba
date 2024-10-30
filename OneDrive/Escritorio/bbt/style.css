@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+/**ESTILOS**/
+:root {
+    --main-color: #eafd96;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.background-container {
+    background-size: cover;
+    background-position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .background-image {
+    background-image: url('/img/fondo-main.jpg');
+    background-size:cover;
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    filter: blur(8px);
+    z-index: -2;
+  }
+
+  .gradient {
+    background: linear-gradient(180deg, transparent, #ffffff);
+    bottom: 15%;
+    height: 30%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+  header, main {
+    z-index: 1;
+  }  
+/**NAVBAR-HEADER*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav img {
+    width: 25px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    rotate: 2deg;
+}
+
+nav .enlaces {
+    display: flex;
+    gap: 40px;
+    margin-left: 10%;
+}
+nav .enlaces a{
+    padding: 10px;
+    color: #b54dc9ff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline 1.5px #b54dc9ff;
+}
+
+nav .enlaces a:hover{
+    background-color: var(--main-color);
+    color: black;
+    border-radius: 15px;
+}
+
+nav button {
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.botones {
+    margin-left: auto;
+}
+
+/**MAIN**/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    height: 100vh;
+}
+
+main img {
+    height: 70vh;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+}
+.column1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    font-family: "Jua", sans-serif;
+    font-size: 8rem;
+    line-height: 0.8;
+    color: #b54dc9ff;
+    text-transform: uppercase;
+    padding: 0;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.644);
+}
+
+.parrafo p {
+    font-family: "Jua", sans-serif;
+    font-size: 1.5rem;
+    padding: 0;
+}
+/**SECTION-SABORES*/
+.sabores {
+    background: #eafd96;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.container-sabores{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+}
+.container-sabores h2, h3{
+    font-family: "Jua", sans-serif;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+.container-sabores p{
+    font-family: "Jua", sans-serif;
+    padding: 30px;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding-left: 2%;
+}
+.card {
+    background: rgb(181, 76, 202);
+    color: rgb(0, 0, 0);
+    width: 20%;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    rotate: 2deg;
+    color: var(--main-color);
+    background-color: rgb(112, 41, 126);
+}
+
+.card img {
+    height: auto;
+    width: 50%;
+    display: flex;
+}
+
+
+/**SECTION-SERVICIO**/
+.servicio {
+    height: 100vh;
+    background-color: var(--main-color);
+    border-bottom-right-radius: 150px;
+    border-top-right-radius: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto button {
+    border: none;
+    width: 30%;
+    height: 10%;
+    background-color: rgb(181, 76, 202);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.texto button:hover {
+    transform: scale(1.1);
+    rotate: 2deg;
+    color: var(--main-color);
+    background-color: rgb(112, 41, 126);
+}
+
+.texto a {
+    border: none;
+    width: 30%;
+    height: 10%;
+    background-color: rgb(181, 76, 202);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto a:hover {
+    transform: scale(1.1);
+    rotate: 2deg;
+    color: var(--main-color);
+    background-color: rgb(112, 41, 126);
+}
+.texto h3 {
+    font-family: "Jua", sans-serif;
+    text-decoration: underline 2px;
+    padding: 0;
+}
+.texto p {
+    font-family: "Jua", sans-serif;
+}
+.imagen-bbt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.imagen-bbt img{
+    height: 80%;
+    border-radius: 18px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+/**UBICACIO**/
+.ubicacion {
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-color);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    height: 80%;
+    width: 80%;
+}
+/**FOOTER**/
+.footer {
+    height: 15vh;
+    background-color: #4d532e;
+    padding: 20px;
+    text-decoration: none;
+}
